@@ -9,4 +9,6 @@ const router = Router();
  * /api/v1/auth/register:
  */
 
-router.post("/cart",productCart);
+router.post("/",productCart);
+
+module.exports=router;
