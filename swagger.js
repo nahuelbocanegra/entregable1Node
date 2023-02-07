@@ -8,7 +8,11 @@ const options = {
 	apis:["./src/routes/auth.routes.js",
 	"./src/models/users.js",
 	"./src/routes/cart.routes.js",
-	"./src/models/cart.js"
+	"./src/models/cart.js",
+	"./src/routes/products.routes.js",
+	"./src/models/product.js",
+	"./src/routes/order.routes.js",
+	"./src/models/Order.js",
 
 ],
     definition: {

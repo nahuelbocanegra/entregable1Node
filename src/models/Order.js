@@ -3,6 +3,24 @@ module.exports = (sequelize, DataTypes) => {
   return Order.init(sequelize, DataTypes);
 }
 
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     order:
+ *       type: object
+ *       properties:
+ *         userId:
+ *           type: integer
+ *           example: userId
+ *         totalPrice:
+ *           type: integer
+ *           example: totalPrice
+ *         status:
+ *           type: boolean
+ *           example: false
+ */
+
 class Order extends Sequelize.Model {
   static init(sequelize, DataTypes) {
   return super.init({

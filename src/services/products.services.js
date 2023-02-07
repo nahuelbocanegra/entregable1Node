@@ -39,14 +39,14 @@ class procuctServices {
             throw error;
         }
     }
-    /** static async update(id,updateProduct){
+    static async update(id,updateProduct){
         try {
-            const result= await product.({where:{id}})
+            const result= await product.update(updateProduct,{where:{id}})
             return result;
         } catch (error) {
             throw error;
         }
-    }*/
+    }
 };
 
 

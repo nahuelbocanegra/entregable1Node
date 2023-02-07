@@ -35,16 +35,16 @@ const deleteId = async (req,res)=>{
     res.status(400).json(error.message)
   }
 }
-/*const updateProduct= async (req,res)=>{
+const updateProduct= async (req,res)=>{
     try {
     const {id}= req.params;
     const updateProduct= req.body;
-    const result = await productServices.update(id,body)
+    const result = await productServices.update(id,updateProduct)
     res.status(200).json(result)
   } catch (error) {
     res.status(400).json(error.message)
   }
-}*/
+}
 
 module.exports={
     getProducts,
