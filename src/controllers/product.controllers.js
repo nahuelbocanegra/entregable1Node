@@ -51,5 +51,5 @@ module.exports={
     creatProducts,
     getIdProduct,
     deleteId,
-    /*updateProduct,*/
+    updateProduct
 }
