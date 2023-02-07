@@ -47,6 +47,24 @@ const {users}=models;
         }
 
     }
+    static async get (){
+        try {
+            const result= await users.findAll();
+            return result
+            
+        } catch (error) {
+            throw error
+        }
+    }
+    static async getId(id){
+        try {
+            const result= await users.findByPk({where:{id}});
+            return result
+            
+        } catch (error) {
+            throw error;
+        }
+    }
  }
 
  module.exports=AuthServices;

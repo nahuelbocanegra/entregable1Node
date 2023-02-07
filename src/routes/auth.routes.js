@@ -1,7 +1,7 @@
 // registro
 //login
 const {Router}=require("express");
-const {register,login}=require("../controllers/auth.controllers");
+const {register,login,user,IdUser}=require("../controllers/auth.controllers");
 
 
 
@@ -74,6 +74,8 @@ const router=Router();
 
 router.post("/register",register);
 router.post("/login",login);
+router.get("/register/user",user);
+router.get("/register/user/:id",IdUser);
 
 
 

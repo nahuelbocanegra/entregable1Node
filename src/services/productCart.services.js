@@ -11,6 +11,30 @@ class productCart {
         }
 
     }
+    static async get (){
+        try {
+            const result= await ProductInCart.findAll();
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    static async getId (id){
+        try {
+            const result= await ProductInCart.findByPk({where:{id}});
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
+    static async deleteId (id){
+        try {
+            const result= await ProductInCart.destroy({where:{id}});
+            return result
+        } catch (error) {
+            throw error;
+        }
+    }
 
 }
 

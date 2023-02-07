@@ -23,10 +23,31 @@ class procuctServices {
             
         }
     }
-
+    static async getId(id){
+        try {
+            const result= await product.findByPk({where:{id}})
+            return result;
+        } catch (error) {
+            throw error;
+        }
+    }
+    static async delete(id){
+        try {
+            const result= await product.destroy({where:{id}})
+            return result;
+        } catch (error) {
+            throw error;
+        }
+    }
+    /** static async update(id,updateProduct){
+        try {
+            const result= await product.({where:{id}})
+            return result;
+        } catch (error) {
+            throw error;
+        }
+    }*/
 };
-/*{where:{
-                quantity:{[op.gt]:0}
-            }} */
+
 
 module.exports=procuctServices;
